@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addItem } from "../../redux/cart/cart.actions";
 
@@ -7,11 +7,12 @@ import NewCollectionModal from "../new-collection-modal/new-collection-modal";
 import "./collection-item.styles.scss";
 
 const NewCollectionItem = ({ item, addItem }) => {
-  // const { name, price, imageUrl } = item;
+  const [showModal, setModal] = useState(false);
+  const changeModalState = (newState) => () => setModal(newState);
 
   return (
     <div className="collection-item">
-      <NewCollectionModal />
+      {showModal && <NewCollectionModal onClose={changeModalState(false)} />}
       <div
         className="image add-new-item"
         style={{
@@ -21,7 +22,7 @@ const NewCollectionItem = ({ item, addItem }) => {
       <div className="collection-footer">
         <span className="name"></span>
       </div>
-      <CustomButton onClick={() => addItem(item)}>Add new Item</CustomButton>
+      <CustomButton onClick={changeModalState(true)}>Add new Item</CustomButton>
     </div>
   );
 };

@@ -15,9 +15,10 @@
     margin-left: 25%;
     margin-top: 8%;
     padding: 30px 30px 10px;
-
+    
     form {
       .form-item {
+        font-size: 16px;
         margin-bottom: 10px;
         label {
           display: block;
@@ -28,6 +29,33 @@
           border: none;
           &:not([type="file"]) {
             border: solid 2px #30303046;
+          }
+        }
+
+        &.button-container {
+          margin-top: 15px;
+        }
+
+        button {
+          padding: 10px 10px;
+          border-radius: 4px;
+          border: none;
+          color: white;
+          font-size: 16px;
+          background: #414040e3;
+
+          transition: ease-in 250ms all;
+          &:hover {
+            background: #313131e3;
+          }
+
+          cursor: pointer;
+          &[type="submit"] {
+            margin-right: 8px;
+            background: #139b13;
+            &:hover {
+              background: #0e7c0e;
+            }
           }
         }
       }
