@@ -1,5 +1,5 @@
 import { Response } from "express";
-import db from "../models";
+import db from "../database/models";
 import { sequelizeErrorHandler } from "../utils/errorHandlers";
 import { RequestType } from "global";
 import { SendGridMailService } from "../services/EmailService";
