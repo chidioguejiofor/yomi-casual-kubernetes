@@ -1,352 +1,352 @@
 [
   {
-    "id": 1,
+    "id": "069e7fb9-ee17-4fbd-9c59-7c5436e3f358",
     "name": "Brown Brim",
     "imageUrl": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
     "price": 25,
-    "categoryId": 1,
+    "categoryId": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "slug": "brown-brim",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 2,
+    "id": "19f64901-ffad-482f-995e-64f8f66ce440",
     "name": "Blue Beanie",
     "imageUrl": "https://i.ibb.co/ypkgK0X/blue-beanie.png",
     "price": 18,
-    "categoryId": 1,
+    "categoryId": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "slug": "blue-beanie",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 3,
+    "id": "0c3f03b9-5ff4-41cf-8557-56cfb6c7ca66",
     "name": "Brown Cowboy",
     "imageUrl": "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
     "price": 35,
-    "categoryId": 1,
+    "categoryId": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "slug": "brown-cowboy",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 4,
+    "id": "9b3f3c70-b2ec-4794-9e0e-e0e7e8b1aaba",
     "name": "Grey Brim",
     "imageUrl": "https://i.ibb.co/RjBLWxB/grey-brim.png",
     "price": 25,
-    "categoryId": 1,
+    "categoryId": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "slug": "grey-brim",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 5,
+    "id": "14ca8869-6613-4b5b-b5fc-b3ee0c276230",
     "name": "Green Beanie",
     "imageUrl": "https://i.ibb.co/YTjW3vF/green-beanie.png",
     "price": 18,
-    "categoryId": 1,
+    "categoryId": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "slug": "green-beanie",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 6,
+    "id": "4fb039ab-23d7-4a9f-a591-7c170a13f04d",
     "name": "Palm Tree Cap",
     "imageUrl": "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
     "price": 14,
-    "categoryId": 1,
+    "categoryId": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "slug": "palm-tree-cap",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 7,
+    "id": "f0bfcbab-ec89-49e9-9380-1a5d2b00695b",
     "name": "Red Beanie",
     "imageUrl": "https://i.ibb.co/bLB646Z/red-beanie.png",
     "price": 18,
-    "categoryId": 1,
+    "categoryId": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "slug": "red-beanie",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 8,
+    "id": "f29a6462-6192-4db8-b5d3-835b894ec5c7",
     "name": "Wolf Cap",
     "imageUrl": "https://i.ibb.co/1f2nWMM/wolf-cap.png",
     "price": 14,
-    "categoryId": 1,
+    "categoryId": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "slug": "wolf-cap",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 9,
+    "id": "80913401-7867-415a-9368-8ec73946d017",
     "name": "Blue Snapback",
     "imageUrl": "https://i.ibb.co/X2VJP2W/blue-snapback.png",
     "price": 16,
-    "categoryId": 1,
+    "categoryId": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "slug": "blue-snapback",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 10,
+    "id": "7c81a7b7-e2e1-4bc4-9ebc-0e36da6c0d28",
     "name": "Adidas NMD",
     "imageUrl": "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
     "price": 220,
-    "categoryId": 3,
+    "categoryId": "3392b7de-8b67-4355-91a4-449dd77bfb52",
     "slug": "adidas-nmd",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 11,
+    "id": "c6574a9b-bee8-480b-8d3c-380fd0241859",
     "name": "Adidas Yeezy",
     "imageUrl": "https://i.ibb.co/dJbG1cT/yeezy.png",
     "price": 280,
-    "categoryId": 3,
+    "categoryId": "3392b7de-8b67-4355-91a4-449dd77bfb52",
     "slug": "adidas-yeezy",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 12,
+    "id": "b2c09933-b38a-48a8-9a46-7bb5266e766a",
     "name": "Black Converse",
     "imageUrl": "https://i.ibb.co/bPmVXyP/black-converse.png",
     "price": 110,
-    "categoryId": 3,
+    "categoryId": "3392b7de-8b67-4355-91a4-449dd77bfb52",
     "slug": "black-converse",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 13,
+    "id": "dc78c57a-ed23-471f-a56b-354b8d858930",
     "name": "Nike White AirForce",
     "imageUrl": "https://i.ibb.co/1RcFPk0/white-nike-high-tops.png",
     "price": 160,
-    "categoryId": 3,
+    "categoryId": "3392b7de-8b67-4355-91a4-449dd77bfb52",
     "slug": "nike-white-airforce",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 14,
+    "id": "261753b4-e227-46cf-a8c1-6948f7101a49",
     "name": "Nike Red High Tops",
     "imageUrl": "https://i.ibb.co/QcvzydB/nikes-red.png",
     "price": 160,
-    "categoryId": 3,
+    "categoryId": "3392b7de-8b67-4355-91a4-449dd77bfb52",
     "slug": "nike-red-high-tops",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 15,
+    "id": "40243d32-cd38-4823-8b32-91b2a36b4d9c",
     "name": "Nike Brown High Tops",
     "imageUrl": "https://i.ibb.co/fMTV342/nike-brown.png",
     "price": 160,
-    "categoryId": 3,
+    "categoryId": "3392b7de-8b67-4355-91a4-449dd77bfb52",
     "slug": "nike-brown-high-tops",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 16,
+    "id": "ba612715-9376-42d8-b1cd-a9487fa9371a",
     "name": "Air Jordan Limited",
     "imageUrl": "https://i.ibb.co/w4k6Ws9/nike-funky.png",
     "price": 190,
-    "categoryId": 3,
+    "categoryId": "3392b7de-8b67-4355-91a4-449dd77bfb52",
     "slug": "air-jordan-limited",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 17,
+    "id": "de187b33-9255-416b-8458-e03f5dca1067",
     "name": "Timberlands",
     "imageUrl": "https://i.ibb.co/Mhh6wBg/timberlands.png",
     "price": 200,
-    "categoryId": 3,
+    "categoryId": "3392b7de-8b67-4355-91a4-449dd77bfb52",
     "slug": "timberlands",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 18,
+    "id": "bceb7b48-07ee-4b97-92c8-eb8f9fd52474",
     "name": "Black Jean Shearling",
     "imageUrl": "https://i.ibb.co/XzcwL5s/black-shearling.png",
     "price": 125,
-    "categoryId": 2,
+    "categoryId": "7e87eed6-d926-44c7-b747-67940ff20bc7",
     "slug": "black-jean-shearling",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 19,
+    "id": "d866aff4-4851-4e84-ad31-e41de932399e",
     "name": "Blue Jean Jacket",
     "imageUrl": "https://i.ibb.co/mJS6vz0/blue-jean-jacket.png",
     "price": 90,
-    "categoryId": 2,
+    "categoryId": "7e87eed6-d926-44c7-b747-67940ff20bc7",
     "slug": "blue-jean-jacket",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 20,
+    "id": "fa8d49c0-c9d1-4f55-a2a7-0e760871ffeb",
     "name": "Grey Jean Jacket",
     "imageUrl": "https://i.ibb.co/N71k1ML/grey-jean-jacket.png",
     "price": 90,
-    "categoryId": 2,
+    "categoryId": "7e87eed6-d926-44c7-b747-67940ff20bc7",
     "slug": "grey-jean-jacket",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 21,
+    "id": "1b1197e5-cec5-44cf-883a-3bc9f5b13a28",
     "name": "Brown Shearling",
     "imageUrl": "https://i.ibb.co/s96FpdP/brown-shearling.png",
     "price": 165,
-    "categoryId": 2,
+    "categoryId": "7e87eed6-d926-44c7-b747-67940ff20bc7",
     "slug": "brown-shearling",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 22,
+    "id": "6e4d2fdc-cc7a-4a6c-9b33-2afa398f5abd",
     "name": "Tan Trench",
     "imageUrl": "https://i.ibb.co/M6hHc3F/brown-trench.png",
     "price": 185,
-    "categoryId": 2,
+    "categoryId": "7e87eed6-d926-44c7-b747-67940ff20bc7",
     "slug": "tan-trench",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 23,
+    "id": "8558bf8c-c8c3-43e6-a930-183d07efd9eb",
     "name": "Blue Tanktop",
     "imageUrl": "https://i.ibb.co/7CQVJNm/blue-tank.png",
     "price": 25,
-    "categoryId": 4,
+    "categoryId": "fbc759c5-66d4-40f8-af4c-fafe0003a7e0",
     "slug": "blue-tanktop",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 24,
+    "id": "62b13c3b-2807-438a-86da-5872df317295",
     "name": "Floral Blouse",
     "imageUrl": "https://i.ibb.co/4W2DGKm/floral-blouse.png",
     "price": 20,
-    "categoryId": 4,
+    "categoryId": "fbc759c5-66d4-40f8-af4c-fafe0003a7e0",
     "slug": "floral-blouse",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 25,
+    "id": "c0a4127a-1721-4254-9fac-34af8dd834b7",
     "name": "Floral Dress",
     "imageUrl": "https://i.ibb.co/KV18Ysr/floral-skirt.png",
     "price": 80,
-    "categoryId": 4,
+    "categoryId": "fbc759c5-66d4-40f8-af4c-fafe0003a7e0",
     "slug": "floral-dress",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 26,
+    "id": "9c60aa23-1fd8-48b9-8c95-cb6bbbd20020",
     "name": "Red Dots Dress",
     "imageUrl": "https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png",
     "price": 80,
-    "categoryId": 4,
+    "categoryId": "fbc759c5-66d4-40f8-af4c-fafe0003a7e0",
     "slug": "red-dots-dress",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 27,
+    "id": "55c31f44-8a2b-4854-ab46-6aa594064899",
     "name": "Striped Sweater",
     "imageUrl": "https://i.ibb.co/KmSkMbH/striped-sweater.png",
     "price": 45,
-    "categoryId": 4,
+    "categoryId": "fbc759c5-66d4-40f8-af4c-fafe0003a7e0",
     "slug": "striped-sweater",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 28,
+    "id": "e3a68769-5c15-40be-96b5-2c382b6ae619",
     "name": "Yellow Track Suit",
     "imageUrl": "https://i.ibb.co/v1cvwNf/yellow-track-suit.png",
     "price": 135,
-    "categoryId": 4,
+    "categoryId": "fbc759c5-66d4-40f8-af4c-fafe0003a7e0",
     "slug": "yellow-track-suit",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 29,
+    "id": "76bc2252-e17f-4af4-a984-739d8bd3e35a",
     "name": "White Blouse",
     "imageUrl": "https://i.ibb.co/qBcrsJg/white-vest.png",
     "price": 20,
-    "categoryId": 4,
+    "categoryId": "fbc759c5-66d4-40f8-af4c-fafe0003a7e0",
     "slug": "white-blouse",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.112Z"
   },
   {
-    "id": 30,
+    "id": "189233fa-a0e8-451e-b96c-be0c50517c69",
     "name": "Camo Down Vest",
     "imageUrl": "https://i.ibb.co/xJS0T3Y/camo-vest.png",
     "price": 325,
-    "categoryId": 5,
+    "categoryId": "6ed3f483-4e3c-49d3-a5ff-abeb9acbc186",
     "slug": "camo-down-vest",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.112Z",
+    "updatedAt": "2021-10-12T10:25:53.112Z"
   },
   {
-    "id": 31,
+    "id": "e16422e9-e276-4639-8aa6-5ccc345b1cd7",
     "name": "Floral T-shirt",
     "imageUrl": "https://i.ibb.co/qMQ75QZ/floral-shirt.png",
     "price": 20,
-    "categoryId": 5,
+    "categoryId": "6ed3f483-4e3c-49d3-a5ff-abeb9acbc186",
     "slug": "floral-t-shirt",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.112Z",
+    "updatedAt": "2021-10-12T10:25:53.112Z"
   },
   {
-    "id": 32,
+    "id": "c157a762-4e98-4be6-8428-7ce0ff98f77f",
     "name": "Black & White Longsleeve",
     "imageUrl": "https://i.ibb.co/55z32tw/long-sleeve.png",
     "price": 25,
-    "categoryId": 5,
+    "categoryId": "6ed3f483-4e3c-49d3-a5ff-abeb9acbc186",
     "slug": "black-&-white-longsleeve",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.112Z",
+    "updatedAt": "2021-10-12T10:25:53.112Z"
   },
   {
-    "id": 33,
+    "id": "9fc211f7-0549-4bb0-ba1c-4cfea4fc862e",
     "name": "Pink T-shirt",
     "imageUrl": "https://i.ibb.co/RvwnBL8/pink-shirt.png",
     "price": 25,
-    "categoryId": 5,
+    "categoryId": "6ed3f483-4e3c-49d3-a5ff-abeb9acbc186",
     "slug": "pink-t-shirt",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.112Z",
+    "updatedAt": "2021-10-12T10:25:53.112Z"
   },
   {
-    "id": 34,
+    "id": "88db774f-ea4f-44d5-ab24-0f81f8a26c4f",
     "name": "Jean Long Sleeve",
     "imageUrl": "https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png",
     "price": 40,
-    "categoryId": 5,
+    "categoryId": "6ed3f483-4e3c-49d3-a5ff-abeb9acbc186",
     "slug": "jean-long-sleeve",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.112Z",
+    "updatedAt": "2021-10-12T10:25:53.112Z"
   },
   {
-    "id": 35,
+    "id": "d37ef84c-25c3-4bca-99e3-160e16c6aad4",
     "name": "Burgundy T-shirt",
     "imageUrl": "https://i.ibb.co/mh3VM1f/polka-dot-shirt.png",
     "price": 25,
-    "categoryId": 5,
+    "categoryId": "6ed3f483-4e3c-49d3-a5ff-abeb9acbc186",
     "slug": "burgundy-t-shirt",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.112Z",
+    "updatedAt": "2021-10-12T10:25:53.112Z"
   }
 ]

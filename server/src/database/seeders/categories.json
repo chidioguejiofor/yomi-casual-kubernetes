@@ -1,53 +1,44 @@
 [
   {
-    "id": 1,
+    "id": "3d609870-3998-41ef-9f5c-ae7d95cf6fb5",
     "title": "Hats",
     "slug": "hats",
     "imageUrl": "https://i.ibb.co/cvpntL1/hats.png",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 3,
+    "id": "3392b7de-8b67-4355-91a4-449dd77bfb52",
     "title": "Sneakers",
     "slug": "sneakers",
     "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 2,
+    "id": "7e87eed6-d926-44c7-b747-67940ff20bc7",
     "title": "Jackets",
     "slug": "jackets",
     "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 4,
+    "id": "fbc759c5-66d4-40f8-af4c-fafe0003a7e0",
     "title": "Womens",
     "slug": "womens",
     "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png",
     "size": "large",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.111Z",
+    "updatedAt": "2021-10-12T10:25:53.111Z"
   },
   {
-    "id": 5,
+    "id": "6ed3f483-4e3c-49d3-a5ff-abeb9acbc186",
     "title": "Mens",
     "slug": "mens",
     "imageUrl": "https://i.ibb.co/R70vBrQ/men.png",
     "size": "large",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
-  },
-  {
-    "id": 6,
-    "title": "Johns",
-    "slug": "johns",
-    "imageUrl": "https://i.ibb.co/R70vBrQ/men.png",
-    "size": "large",
-    "createdAt": "2021-10-06T10:08:10.878Z",
-    "updatedAt": "2021-10-06T10:08:10.878Z"
+    "createdAt": "2021-10-12T10:25:53.112Z",
+    "updatedAt": "2021-10-12T10:25:53.112Z"
   }
 ]

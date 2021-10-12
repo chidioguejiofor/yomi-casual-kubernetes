@@ -17,12 +17,32 @@ class Product extends Model {
 module.exports = (sequelize, DataTypes) => {
   Product.init(
     {
-      name: DataTypes.STRING,
-      price: DataTypes.NUMBER,
-      imageUrl: DataTypes.STRING,
-      price: DataTypes.NUMBER,
+      id: {
+        primaryKey: true,
+        type: DataTypes.STRING,
+        defaultValue: DataTypes.UUIDV4,
+      },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      price: {
+        type: DataTypes.NUMBER,
+        allowNull: false,
+      },
+      imageUrl: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      price: {
+        type: DataTypes.NUMBER,
+        allowNull: false,
+      },
       categoryId: DataTypes.NUMBER,
-      slug: DataTypes.STRING,
+      slug: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     {
       sequelize,

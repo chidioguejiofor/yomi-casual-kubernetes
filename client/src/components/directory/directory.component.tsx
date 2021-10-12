@@ -2,13 +2,13 @@ import React from "react";
 import MenuItem from "../menu-item/menu-item.component";
 
 import "./directory.styles.scss";
-import shopService from "../../services/shop/shop";
+import { useRetrieveCollections } from "./useRetrieveCollections";
 
 const Directory = () => {
-  const categories = shopService.getCollections();
+  const { collections } = useRetrieveCollections();
   return (
     <div className="directory-menu">
-      {categories.map(({ id, ...otherSectionProps }) => (
+      {collections.map(({ id, ...otherSectionProps }) => (
         <MenuItem key={id} {...otherSectionProps} />
       ))}
     </div>

@@ -1,4 +1,5 @@
 const fs = require("fs");
+const uuid = require("uuid");
 
 const SHOP_DATA = {
   hats: {
@@ -268,7 +269,7 @@ let currentProductIdCount = 1;
 for (const categoryObject of Object.values(SHOP_DATA)) {
   const productionsInCategory = categoryObject.items;
 
-  const categoryId = categoryObject.id;
+  const categoryId = uuid.v4();
 
   categories.push({
     id: categoryId,
@@ -282,7 +283,7 @@ for (const categoryObject of Object.values(SHOP_DATA)) {
 
   for (const product of productionsInCategory) {
     products.push({
-      id: currentProductIdCount++,
+      id: uuid.v4(),
       name: product.name,
       imageUrl: product.imageUrl,
       price: product.price,
@@ -295,7 +296,10 @@ for (const categoryObject of Object.values(SHOP_DATA)) {
 }
 
 fs.writeFileSync(
-  "./database/seeders/categories.json",
+  "./src/database/seeders/categories.json",
   JSON.stringify(categories)
 );
-fs.writeFileSync("./database/seeders/products.json", JSON.stringify(products));
+fs.writeFileSync(
+  "./src/database/seeders/products.json",
+  JSON.stringify(products)
+);

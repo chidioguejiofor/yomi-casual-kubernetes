@@ -1,3 +1,5 @@
+import { productRepository } from "repositories";
+import { IProductCategoryRequest, IProductRequest } from "requestTypes";
 import { CreateProductCategoryUsecase } from "./product/CreateProductCategoryUsecase";
 import { CreateProductUsecase } from "./product/CreateProductUsecase";
 import { RetrieveProductCategoryUsecase } from "./product/RetrieveProductCategoryUsecase";
@@ -10,25 +12,29 @@ class ProductAPI {
   private createProductUsecase: CreateProductUsecase;
 
   constructor() {
-    this.createProductCategoryUsecase = new CreateProductCategoryUsecase();
-    this.retrieveProductCategoryUsecase = new RetrieveProductCategoryUsecase();
-    this.retrieveProductUsecase = new RetrieveProductUsecase();
-    this.createProductUsecase = new CreateProductUsecase();
+    this.createProductCategoryUsecase = new CreateProductCategoryUsecase(
+      productRepository
+    );
+    this.retrieveProductCategoryUsecase = new RetrieveProductCategoryUsecase(
+      productRepository
+    );
+    this.retrieveProductUsecase = new RetrieveProductUsecase(productRepository);
+    this.createProductUsecase = new CreateProductUsecase(productRepository);
   }
 
-  createProductCategory() {
-    return this.createProductCategoryUsecase.execute();
+  async createProductCategory(category: IProductCategoryRequest) {
+    return this.createProductCategoryUsecase.execute(category);
   }
 
-  createProduct() {
-    return this.createProductUsecase.execute();
+  async createProduct(product: IProductRequest) {
+    return this.createProductUsecase.execute(product);
   }
 
-  retrieveCategories() {
+  async retrieveCategories() {
     return this.retrieveProductCategoryUsecase.execute();
   }
 
-  retrieveProducts() {
+  async retrieveProducts() {
     return this.retrieveProductUsecase.execute();
   }
 }

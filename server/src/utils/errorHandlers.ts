@@ -1,6 +1,6 @@
 export const sequelizeErrorHandler = (error: {
   errors: Record<string, any>[];
-}): [Record<string, any>, number] => {
+}): [Record<string, any>, number, string] => {
   let statusCode = 400;
   const parsedErrros = error.errors?.map((errItem) => {
     if (errItem.validatorKey === "is_null") {
@@ -17,11 +17,5 @@ export const sequelizeErrorHandler = (error: {
     console.error(error.errors);
   }
 
-  return [
-    {
-      message: "There was some errors in your request",
-      errors: parsedErrros,
-    },
-    statusCode,
-  ];
+  return [parsedErrros, statusCode, "There was some errors in your request"];
 };

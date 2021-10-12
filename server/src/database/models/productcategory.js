@@ -14,10 +14,27 @@ class ProductCategory extends Model {
 module.exports = (sequelize, DataTypes) => {
   ProductCategory.init(
     {
-      title: DataTypes.STRING,
-      imageUrl: DataTypes.STRING,
-      size: DataTypes.NUMBER,
-      slug: DataTypes.STRING,
+      id: {
+        primaryKey: true,
+        type: DataTypes.STRING,
+        defaultValue: DataTypes.UUIDV4,
+      },
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      imageUrl: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      size: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      slug: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     {
       sequelize,
