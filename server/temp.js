@@ -265,7 +265,6 @@ const SHOP_DATA = {
 const categories = [];
 const products = [];
 
-let currentProductIdCount = 1;
 for (const categoryObject of Object.values(SHOP_DATA)) {
   const productionsInCategory = categoryObject.items;
 

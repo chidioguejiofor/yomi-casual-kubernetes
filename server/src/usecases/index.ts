@@ -4,12 +4,14 @@ import { CreateProductCategoryUsecase } from "./product/CreateProductCategoryUse
 import { CreateProductUsecase } from "./product/CreateProductUsecase";
 import { RetrieveProductCategoryUsecase } from "./product/RetrieveProductCategoryUsecase";
 import { RetrieveProductUsecase } from "./product/RetrieveProductUsecase";
+import { RetrieveSingleProductCategoryUsecase } from "./product/RetrieveSingleProductCategoryUsecase";
 
 class ProductAPI {
   private createProductCategoryUsecase: CreateProductCategoryUsecase;
   private retrieveProductCategoryUsecase: RetrieveProductCategoryUsecase;
   private retrieveProductUsecase: RetrieveProductUsecase;
   private createProductUsecase: CreateProductUsecase;
+  private retrieveSingleProductCategoryUsecase: RetrieveSingleProductCategoryUsecase;
 
   constructor() {
     this.createProductCategoryUsecase = new CreateProductCategoryUsecase(
@@ -20,6 +22,10 @@ class ProductAPI {
     );
     this.retrieveProductUsecase = new RetrieveProductUsecase(productRepository);
     this.createProductUsecase = new CreateProductUsecase(productRepository);
+
+    this.retrieveSingleProductCategoryUsecase = new RetrieveSingleProductCategoryUsecase(
+      productRepository
+    );
   }
 
   async createProductCategory(category: IProductCategoryRequest) {
@@ -34,8 +40,12 @@ class ProductAPI {
     return this.retrieveProductCategoryUsecase.execute();
   }
 
-  async retrieveProducts() {
-    return this.retrieveProductUsecase.execute();
+  async retrieveProducts(categoryId: string) {
+    return this.retrieveProductUsecase.execute(categoryId);
+  }
+
+  async retrieveProductCategoryBySlug(slug: string) {
+    return this.retrieveSingleProductCategoryUsecase.execute(slug);
   }
 }
 

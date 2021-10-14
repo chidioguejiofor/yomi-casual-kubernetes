@@ -1,7 +1,12 @@
 import React, { useEffect } from "react";
 import "./new-collection-modal.styles.scss";
 
-const NewCollectionModal = ({ onClose, onCreate }) => {
+type NewCollectionModalProps = {
+  onClose: () => void;
+  onCreate: (values) => void;
+};
+const NewCollectionModal = (props: NewCollectionModalProps) => {
+  const { onClose, onCreate } = props;
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -14,6 +19,8 @@ const NewCollectionModal = ({ onClose, onCreate }) => {
     const formData = new FormData(e.target);
     console.log(Array.from(formData.values()).map((item) => item));
     console.log(formData.values());
+
+    onCreate(formData);
   };
   return (
     <div className="new-collection-modal">

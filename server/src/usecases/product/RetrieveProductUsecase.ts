@@ -8,9 +8,11 @@ export class RetrieveProductUsecase {
     this.productRepository = productRepository;
   }
 
-  async execute(): Promise<ResponseType> {
+  async execute(categoryId: string): Promise<ResponseType> {
     try {
-      const products = await this.productRepository.retrieveProducts();
+      const products = await this.productRepository.retrieveProducts({
+        categoryId,
+      });
 
       return {
         message: "Successfully retrieved products",

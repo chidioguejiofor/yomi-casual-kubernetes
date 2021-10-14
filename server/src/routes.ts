@@ -44,6 +44,9 @@ export class Routes {
     allowAllHostsRouter
       .route("/products/categories")
       .get(productCategoryController.getProductCategories);
+    allowAllHostsRouter
+      .route("/products/categories/:slug")
+      .get(productCategoryController.getProductCategory);
 
     allowAllHostsRouter
       .route("/products")

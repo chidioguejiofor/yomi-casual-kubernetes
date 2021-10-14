@@ -9,7 +9,7 @@ export type IProductCategory = IProductCategoryRequest & {
   id: number;
   title: string;
   slug: string;
-  imageUrl: string;
+  imageUrl?: string;
   size: string;
   createdAt: string;
   updatedAt: string;

@@ -22,6 +22,15 @@ class ProductCategoryController {
     const { statusCode, ...others } = await productAPI.retrieveCategories();
     return res.status(statusCode).json({ ...others });
   }
+
+  async getProductCategory(req: RequestType, res: Response): Promise<unknown> {
+    const { slug } = req.params;
+    const {
+      statusCode,
+      ...others
+    } = await productAPI.retrieveProductCategoryBySlug(slug);
+    return res.status(statusCode).json({ ...others });
+  }
 }
 
 class ProductController {
@@ -29,12 +38,15 @@ class ProductController {
     const data = req.body as IProductRequest;
     const { statusCode, ...others } = await productAPI.createProduct(data);
 
-    console.log("===>", others);
     return res.status(statusCode).json({ ...others });
   }
 
   async getProducts(req: RequestType, res: Response): Promise<unknown> {
-    const { statusCode, ...others } = await productAPI.retrieveProducts();
+    const { category_id: categoryId } = req.query;
+
+    const { statusCode, ...others } = await productAPI.retrieveProducts(
+      categoryId as string
+    );
     return res.status(statusCode).json({ ...others });
   }
 }

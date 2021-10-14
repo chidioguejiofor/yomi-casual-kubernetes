@@ -1,21 +1,31 @@
 import { backendApiClient } from "../../externalClients/axios";
-import { Collection } from "../../interfaces";
+import { Collection, Product } from "../../interfaces";
 import { IShopServiceInterface } from "../../interfaces/IShopServiceInterface";
 import shopData from "./shop.data";
 
 class ShopService implements IShopServiceInterface {
-  getProductsInCollection(collectionId) {
-    return shopData[collectionId];
-  }
-
-  async getCollections(): Promise<Collection> {
-    const response = await backendApiClient.get("/products/categories");
+  async getSingleCollection(categoryId: string): Promise<Collection> {
+    const response = await backendApiClient.get(
+      `/products/categories/${categoryId}`
+    );
     const { data } = response.data;
 
     return data as Collection;
-    return Object.values(shopData).sort(
-      (a, b) => a.id - b.id
-    ) as unknown as Collection;
+  }
+  async getProductsInCollection(collectionId) {
+    const response = await backendApiClient.get(
+      `/products?category_id=${collectionId}`
+    );
+    const { data } = response.data;
+
+    return data as Product[];
+  }
+
+  async getCollections(): Promise<Collection[]> {
+    const response = await backendApiClient.get("/products/categories");
+    const { data } = response.data;
+
+    return data as Collection[];
   }
 }
 

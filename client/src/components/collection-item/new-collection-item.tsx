@@ -6,13 +6,18 @@ import CustomButton from "../custom-button/custom-button";
 import NewCollectionModal from "../new-collection-modal/new-collection-modal";
 import "./collection-item.styles.scss";
 
-const NewCollectionItem = ({ item, addItem }) => {
+const NewCollectionItem = ({ onCreate }) => {
   const [showModal, setModal] = useState(false);
   const changeModalState = (newState) => () => setModal(newState);
 
   return (
     <div className="collection-item">
-      {showModal && <NewCollectionModal onClose={changeModalState(false)} />}
+      {showModal && (
+        <NewCollectionModal
+          onClose={changeModalState(false)}
+          onCreate={onCreate}
+        />
+      )}
       <div
         className="image add-new-item"
         style={{

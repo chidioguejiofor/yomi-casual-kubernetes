@@ -1,6 +1,7 @@
-import { Collection } from "./ICollection";
+import { Collection, Product } from "./ICollection";
 
 export interface IShopServiceInterface {
-  getProductsInCollection(collectionId): any;
-  getCollections(): Promise<Collection>;
+  getProductsInCollection(collectionId: string): Promise<Product[]>;
+  getCollections(): Promise<Collection[]>;
+  getSingleCollection(collectionId: string): Promise<Collection>;
 }
