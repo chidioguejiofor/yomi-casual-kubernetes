@@ -7,6 +7,7 @@ export const sequelizeErrorHandler = (error: {
   const parsedErrors = [];
 
   const objectErrors = {};
+  let message = "There was some errors in your request";
   for (const errItem of postgresErrors) {
     const currentErrors = objectErrors[errItem.path] || [];
     if (errItem.validatorKey === "is_null") {
@@ -16,10 +17,12 @@ export const sequelizeErrorHandler = (error: {
       statusCode = 409;
       parsedErrors.push(`${errItem.path} already exists`);
       currentErrors.push(`${errItem.path} already exists`);
+    } else {
+      message = errItem.message || message;
     }
-    parsedErrors.push(errItem.message);
+
     objectErrors[errItem.path] = currentErrors;
   }
 
-  return [parsedErrors, statusCode, "There was some errors in your request"];
+  return [parsedErrors, statusCode, message];
 };
