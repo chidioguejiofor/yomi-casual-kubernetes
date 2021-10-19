@@ -26,9 +26,7 @@ export abstract class BaseValidator {
     return value;
   }
 
-  public excludeUnknownFields(
-    data: Record<string, unknown>
-  ): Record<string, unknown> {
+  public excludeUnknownFields<T = Record<string, any>>(data: T): T {
     if (!this.excludeFieldsThatAreNotInSchema) return data;
 
     const finalResult = {};
@@ -36,14 +34,14 @@ export abstract class BaseValidator {
       finalResult[key] = data[key];
     });
 
-    return finalResult;
+    return finalResult as T;
   }
-
-  public validate(inputData: Record<string, any>) {
+  // IRegisterRequest
+  public validate<T = Record<string, any>>(inputData: T): [boolean, T] {
     const data = inputData;
 
     Object.entries(inputData).forEach(([key, value]) => {
-      data[key] = this.transformInputData(key, value, inputData);
+      data[key] = this.transformInputData(key, value, inputData as any);
     });
 
     const validation = new Validator(data, this.SCHEMA);

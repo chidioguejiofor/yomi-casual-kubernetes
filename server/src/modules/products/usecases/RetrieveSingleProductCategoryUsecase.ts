@@ -1,5 +1,5 @@
-import { ProductRepoType } from "repositories";
-import { ResponseType } from "../types";
+import { ProductRepoType } from "modules/products/repositories";
+import { UsecaseResponseType } from "types";
 
 export class RetrieveSingleProductCategoryUsecase {
   productRepository: ProductRepoType;
@@ -8,7 +8,10 @@ export class RetrieveSingleProductCategoryUsecase {
     this.productRepository = productRepository;
   }
 
-  async execute(queryValue: string, getBySlug = true): Promise<ResponseType> {
+  async execute(
+    queryValue: string,
+    getBySlug = true
+  ): Promise<UsecaseResponseType> {
     let singleCategory = null;
     try {
       if (getBySlug) {

@@ -1,5 +1,5 @@
-import { ProductRepoType } from "repositories";
-import { ResponseType } from "../types";
+import { ProductRepoType } from "modules/products/repositories";
+import { UsecaseResponseType } from "types";
 
 export class RetrieveProductUsecase {
   productRepository: ProductRepoType;
@@ -8,7 +8,7 @@ export class RetrieveProductUsecase {
     this.productRepository = productRepository;
   }
 
-  async execute(categoryId: string): Promise<ResponseType> {
+  async execute(categoryId: string): Promise<UsecaseResponseType> {
     try {
       const products = await this.productRepository.retrieveProducts({
         categoryId,

@@ -2,10 +2,7 @@ import { Application, Router } from "express";
 import {
   registerValidator,
   loginValidator,
-  forgotPasswordValidator,
-  changeForgottenPasswordValidator,
-  loggedInUserChangePasswordValidator,
-} from "./validation/auth";
+} from "./modules/auth/validation/auth";
 import {
   AuthController,
   productCategoryController,
@@ -13,7 +10,6 @@ import {
 } from "./controllers";
 
 import cors from "cors";
-import { TokenValidator } from "./utils/TokenValidator";
 
 export class Routes {
   public static authController: AuthController = new AuthController();
@@ -37,56 +33,49 @@ export class Routes {
       })
     );
 
+    // AUTh
+    allowSpecificHostsRouter
+      .route("/auth/register")
+      .post(registerValidator.middleware, this.authController.register);
+
+    allowSpecificHostsRouter
+      .route("/auth/login")
+      .post(loginValidator.middleware, this.authController.login);
+
+    // PRODUCTS
     allowAllHostsRouter
       .route("/products/categories")
-      .post(productCategoryController.createProductCategory);
+      .post(
+        this.authController.validateLoginMiddleware,
+        productCategoryController.createProductCategory
+      );
 
     allowAllHostsRouter
       .route("/products/categories")
-      .get(productCategoryController.getProductCategories);
+      .get(
+        this.authController.validateLoginMiddleware,
+        productCategoryController.getProductCategories
+      );
     allowAllHostsRouter
       .route("/products/categories/:slug")
-      .get(productCategoryController.getProductCategory);
+      .get(
+        this.authController.validateLoginMiddleware,
+        productCategoryController.getProductCategory
+      );
 
     allowAllHostsRouter
       .route("/products")
-      .post(productController.createProduct);
+      .post(
+        this.authController.validateLoginMiddleware,
+        productController.createProduct
+      );
 
-    allowAllHostsRouter.route("/products").get(productController.getProducts);
-
-    // allowAllHostsRouter
-    //   .route("/auth/confirm-email/:id")
-    //   .get(this.authController.confirmEmail);
-
-    // allowSpecificHostsRouter
-    //   .route("/auth/register")
-    //   .post(registerValidator.middleware, this.authController.register);
-
-    // allowSpecificHostsRouter
-    //   .route("/auth/login")
-    //   .post(loginValidator.middleware, this.authController.login);
-
-    // allowSpecificHostsRouter
-    //   .route("/auth/forgot-password")
-    //   .post(
-    //     forgotPasswordValidator.middleware,
-    //     this.authController.forgotPassword
-    //   );
-
-    // allowSpecificHostsRouter
-    //   .route("/auth/forgot-password/confirm")
-    //   .post(
-    //     changeForgottenPasswordValidator.middleware,
-    //     this.authController.changeForgottenPassword
-    //   );
-
-    // allowSpecificHostsRouter
-    //   .route("/auth/change-password")
-    //   .post(
-    //     TokenValidator.protectRouteMiddleWare,
-    //     loggedInUserChangePasswordValidator.middleware,
-    //     this.authController.loggedInUserChangesPassword
-    //   );
+    allowAllHostsRouter
+      .route("/products")
+      .get(
+        this.authController.validateLoginMiddleware,
+        productController.getProducts
+      );
 
     // protectRouteMiddleWare
     app.use("/api", allowSpecificHostsRouter);

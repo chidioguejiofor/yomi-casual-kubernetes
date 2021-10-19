@@ -1,10 +1,13 @@
-import { productRepository } from "repositories";
-import { IProductCategoryRequest, IProductRequest } from "requestTypes";
-import { CreateProductCategoryUsecase } from "./product/CreateProductCategoryUsecase";
-import { CreateProductUsecase } from "./product/CreateProductUsecase";
-import { RetrieveProductCategoryUsecase } from "./product/RetrieveProductCategoryUsecase";
-import { RetrieveProductUsecase } from "./product/RetrieveProductUsecase";
-import { RetrieveSingleProductCategoryUsecase } from "./product/RetrieveSingleProductCategoryUsecase";
+import { productRepository } from "modules/products/repositories";
+import {
+  IProductCategoryRequest,
+  IProductRequest,
+} from "modules/products/requestTypes";
+import { CreateProductCategoryUsecase } from "./usecases/CreateProductCategoryUsecase";
+import { CreateProductUsecase } from "./usecases/CreateProductUsecase";
+import { RetrieveProductCategoryUsecase } from "./usecases/RetrieveProductCategoryUsecase";
+import { RetrieveProductUsecase } from "./usecases/RetrieveProductUsecase";
+import { RetrieveSingleProductCategoryUsecase } from "./usecases/RetrieveSingleProductCategoryUsecase";
 
 class ProductAPI {
   private createProductCategoryUsecase: CreateProductCategoryUsecase;
@@ -50,3 +53,4 @@ class ProductAPI {
 }
 
 export const productAPI = new ProductAPI();
+export default productAPI;

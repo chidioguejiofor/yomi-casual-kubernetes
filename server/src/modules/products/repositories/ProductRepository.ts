@@ -1,7 +1,7 @@
 import * as AWS from "aws-sdk";
-import { IProductCategoryRequest, IProductRequest } from "requestTypes";
+import { IProductCategoryRequest, IProductRequest } from "modules/products/requestTypes";
 import db from "database/models";
-import { uuidGenerator } from "services/cache/Cache";
+import { uuidGenerator } from "shared/services/cache/Cache";
 
 const bucketName = process.env.ATTACHMENT_S3_BUCKET;
 const SIGNED_URL_EXPIRATION = +process.env.SIGNED_URL_EXPIRATION;

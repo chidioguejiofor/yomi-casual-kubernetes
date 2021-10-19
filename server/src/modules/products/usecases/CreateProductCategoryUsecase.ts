@@ -1,6 +1,6 @@
-import { ProductRepoType } from "repositories";
-import { sequelizeErrorHandler } from "utils/errorHandlers";
-import { ResponseType } from "../types";
+import { ProductRepoType } from "modules/products/repositories";
+import { sequelizeErrorHandler } from "shared/utils/errorHandlers";
+import { UsecaseResponseType } from "types";
 
 export class CreateProductCategoryUsecase {
   productRepository: ProductRepoType;
@@ -9,7 +9,7 @@ export class CreateProductCategoryUsecase {
     this.productRepository = productRepository;
   }
 
-  async execute(category): Promise<ResponseType> {
+  async execute(category): Promise<UsecaseResponseType> {
     try {
       const newProductCategory = await this.productRepository.createProductCategory(
         category

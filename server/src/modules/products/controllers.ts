@@ -1,7 +1,10 @@
 import { RequestType } from "global";
 import { Response } from "express";
-import { productAPI } from "../usecases";
-import { IProductCategoryRequest, IProductRequest } from "requestTypes";
+import { productAPI } from "./api";
+import {
+  IProductCategoryRequest,
+  IProductRequest,
+} from "modules/products/requestTypes";
 
 class ProductCategoryController {
   async createProductCategory(
