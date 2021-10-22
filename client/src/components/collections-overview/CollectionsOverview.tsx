@@ -1,11 +1,12 @@
 import React from "react";
 import CollectionPreview from "../collection-preview/collection-preview";
 import "./collectionsOverview.styles.scss";
-import shopService from "../../services/shop/shop";
-import useRetrieveCollections from "../../hooks/shopHooks";
+import { useRetrieveProductCategory } from "../../hooks/shopHooks";
 
 const CollectionsOverview = () => {
-  const { collections } = useRetrieveCollections();
+  const { collections } = useRetrieveProductCategory();
+
+  console.log(collections, "<=====collections");
   return (
     <div className="collections-overview">
       {collections.map(({ id, ...otherCollectionProps }) => (

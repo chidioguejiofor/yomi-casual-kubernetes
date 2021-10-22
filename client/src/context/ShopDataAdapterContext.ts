@@ -1,6 +1,5 @@
-import { createContext, useContext, useState, useEffect } from "react";
-import { IShopServiceInterface, Collection } from "../interfaces";
-
+import { createContext } from "react";
+import { IShopServiceInterface } from "../interfaces";
 
 export const ShopDataAdapterContext =
   createContext<IShopServiceInterface | null>(null);

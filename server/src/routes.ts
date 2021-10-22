@@ -28,7 +28,7 @@ export class Routes {
 
     allowSpecificHostsRouter.use(
       cors({
-        origin: ["http://localhost:3000", "https://syca-49bfe.web.app"], // this changes based on the project,
+        origin: ["http://localhost:3001"], // this changes based on the project,
         methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
       })
     );
@@ -52,30 +52,16 @@ export class Routes {
 
     allowAllHostsRouter
       .route("/products/categories")
-      .get(
-        this.authController.validateLoginMiddleware,
-        productCategoryController.getProductCategories
-      );
+      .get(productCategoryController.getProductCategories);
     allowAllHostsRouter
       .route("/products/categories/:slug")
-      .get(
-        this.authController.validateLoginMiddleware,
-        productCategoryController.getProductCategory
-      );
+      .get(productCategoryController.getProductCategory);
 
     allowAllHostsRouter
       .route("/products")
-      .post(
-        this.authController.validateLoginMiddleware,
-        productController.createProduct
-      );
+      .post(productController.createProduct);
 
-    allowAllHostsRouter
-      .route("/products")
-      .get(
-        this.authController.validateLoginMiddleware,
-        productController.getProducts
-      );
+    allowAllHostsRouter.route("/products").get(productController.getProducts);
 
     // protectRouteMiddleWare
     app.use("/api", allowSpecificHostsRouter);

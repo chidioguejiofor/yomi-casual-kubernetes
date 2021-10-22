@@ -6,15 +6,14 @@ import { useRetrieveProducts } from "../../hooks/shopHooks";
 
 const CollectionPage = (props) => {
   const categoryId = props.match.params.collectionID;
-  const { products, loading, category } = useRetrieveProducts(categoryId);
+  const { products, category } = useRetrieveProducts(categoryId);
 
-  const handleCreate = (values) => {};
   return (
     <div className="collection-page">
       <h2 className="title">{category?.title}</h2>
       <div className="items">
         <>
-          <NewCollectionItem onCreate={handleCreate} />
+          <NewCollectionItem categoryId={categoryId} />
           {products.map((item) => (
             <CollectionItem key={item.id} item={item} />
           ))}

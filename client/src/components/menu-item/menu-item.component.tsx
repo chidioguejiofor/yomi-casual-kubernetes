@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import "./menu-item.styles.scss";
 
 const MenuItem = (props) => {
-  const { title, imageUrl, size, history, match, slug } = props;
+  const { title, imageUrl, size, history, slug } = props;
 
   const linkUrl = `/shop/${slug}`;
 

@@ -1,7 +1,10 @@
 import * as AWS from "aws-sdk";
-import { IProductCategoryRequest, IProductRequest } from "modules/products/requestTypes";
+import {
+  IProductCategoryRequest,
+  IProductRequest,
+} from "modules/products/requestTypes";
 import db from "database/models";
-import { uuidGenerator } from "shared/services/cache/Cache";
+import { v4 as uuidGenerator } from "uuid";
 
 const bucketName = process.env.ATTACHMENT_S3_BUCKET;
 const SIGNED_URL_EXPIRATION = +process.env.SIGNED_URL_EXPIRATION;
@@ -18,6 +21,7 @@ class ProductRepository {
       signatureVersion: "v4",
       accessKeyId: AWS_ID,
       secretAccessKey: AWS_SECRET,
+      region: "eu-central-1",
     });
   }
 

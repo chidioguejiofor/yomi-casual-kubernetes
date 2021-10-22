@@ -20,9 +20,10 @@ export type IProductRequest = {
   price: number;
   imageUrl: string;
   slug: string;
-  categoryId: number;
+  categoryId?: string;
 };
 
 export type IProduct = IProductRequest & {
   id: number;
+  categoryId: string;
 };

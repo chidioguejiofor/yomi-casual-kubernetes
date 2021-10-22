@@ -1,4 +1,5 @@
 import { ProductRepoType } from "modules/products/repositories";
+import { Op } from "sequelize";
 import { sequelizeErrorHandler } from "shared/utils/errorHandlers";
 import { UsecaseResponseType } from "types";
 
@@ -9,13 +10,36 @@ export class CreateProductUsecase {
     this.productRepository = productRepository;
   }
 
-  async execute(product): Promise<UsecaseResponseType> {
+  async execute(
+    product,
+    categorySlugOrId: string
+  ): Promise<UsecaseResponseType> {
     try {
-      const newProduct = await this.productRepository.createProduct(product);
+      const category = await this.productRepository.getProductCategory({
+        [Op.or]: [
+          {
+            slug: categorySlugOrId,
+          },
+          {
+            id: categorySlugOrId,
+          },
+        ],
+      });
+
+      if (!category) {
+        return {
+          message: "Category not found",
+          statusCode: 404,
+        };
+      }
+      const newProduct = await this.productRepository.createProduct({
+        ...product,
+        categoryId: category.id,
+      });
 
       return {
         message: "Successfully created product",
-        statusCode: 200,
+        statusCode: 201,
         data: newProduct,
       };
     } catch (error) {

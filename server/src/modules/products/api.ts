@@ -35,8 +35,8 @@ class ProductAPI {
     return this.createProductCategoryUsecase.execute(category);
   }
 
-  async createProduct(product: IProductRequest) {
-    return this.createProductUsecase.execute(product);
+  async createProduct(product: IProductRequest, categoryIdOrSlug: string) {
+    return this.createProductUsecase.execute(product, categoryIdOrSlug);
   }
 
   async retrieveCategories() {

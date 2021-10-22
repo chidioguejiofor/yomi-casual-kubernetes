@@ -13,7 +13,7 @@ type RetrieveProductsReturnType = {
   category: null | Collection;
 };
 
-export const useRetrieveCollections = (): RetrieveCollectionReturnType => {
+export const useRetrieveProductCategory = (): RetrieveCollectionReturnType => {
   const shopService = useContext(ShopDataAdapterContext);
 
   const [collectionsArguments, setCollectionsArguments] = useState({
@@ -36,10 +36,11 @@ export const useRetrieveCollections = (): RetrieveCollectionReturnType => {
     }
 
     getInitialData();
+    //eslint-disable-next-line
   }, []);
 
   if (!shopService) {
-    throw "The ShopDataAdapterContext is required";
+    throw new Error("The ShopDataAdapterContext is required");
   }
 
   return collectionsArguments;
@@ -75,13 +76,51 @@ export const useRetrieveProducts = (
     }
 
     getInitialData();
+    //eslint-disable-next-line
   }, [categorySlug]);
 
   if (!shopService) {
-    throw "The ShopDataAdapterContext is required";
+    throw new Error("The ShopDataAdapterContext is required");
   }
 
   return productState;
+};
+
+export const useCreateProduct = (categorySlug: string) => {
+  const shopService = useContext(
+    ShopDataAdapterContext
+  ) as IShopServiceInterface;
+
+  const [productState, setProductState] = useState({
+    products: {},
+    loading: false,
+  });
+
+  async function createNewProduct(productArgs): Promise<boolean> {
+    setProductState({
+      ...productState,
+      loading: true,
+    });
+
+    const newProduct = await shopService.createProduct(
+      productArgs,
+      categorySlug
+    );
+    if (!newProduct) alert("Something went wrong while creating product");
+    setProductState({
+      ...productState,
+      products: newProduct,
+      loading: false,
+    });
+
+    return !!newProduct;
+  }
+
+  if (!shopService) {
+    throw new Error("The ShopDataAdapterContext is required");
+  }
+
+  return [productState, createNewProduct];
 };
 
 export default ShopDataAdapterContext;

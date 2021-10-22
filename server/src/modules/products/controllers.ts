@@ -38,8 +38,11 @@ class ProductCategoryController {
 
 class ProductController {
   async createProduct(req: RequestType, res: Response): Promise<unknown> {
-    const data = req.body as IProductRequest;
-    const { statusCode, ...others } = await productAPI.createProduct(data);
+    const { categoryId, ...data } = req.body as IProductRequest;
+    const { statusCode, ...others } = await productAPI.createProduct(
+      data,
+      categoryId
+    );
 
     return res.status(statusCode).json({ ...others });
   }
