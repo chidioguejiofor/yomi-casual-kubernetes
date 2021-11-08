@@ -65,7 +65,7 @@ export class TokenValidator {
       });
     }
 
-    req.decoded = decodedOrError;
+    req.decoded = decodedOrError as any;
     return next();
   }
 }

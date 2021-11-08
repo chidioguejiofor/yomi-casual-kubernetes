@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - 13
+
+services:
+  - docker
+
+# Pre-testing installs
+install:
+  - echo "nothing needs to be installed"
+
+# Scripts to be run such as tests
+before_script:
+  - echo "no tests"
+
+script:
+  - docker --version # print the version for logging
+  - docker build -t  capstone-server ./server
+  - docker build -t capstone-frontend ./client
+
+
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push profchidi1/udagram-api-feed
+  - docker push profchidi1/udagram-api-user
+  - docker push profchidi1/udagram-frontend
+  - docker push profchidi1/udagram-reverseproxy
+
