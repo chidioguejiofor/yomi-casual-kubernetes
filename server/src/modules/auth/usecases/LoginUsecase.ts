@@ -2,13 +2,13 @@ import { UserRepoType } from "../repositories";
 import { sequelizeErrorHandler } from "shared/utils/errorHandlers";
 import { UsecaseResponseType } from "types";
 import { ILoginRequest } from "../requestTypes";
-import { JWTAdaptorType } from "../adaptors/JWTAdaptor";
+import { JWTServiceType } from "../services/JWTService";
 
 export class LoginUsecase {
   userRepository: UserRepoType;
-  jwtAdaptor: JWTAdaptorType;
+  jwtAdaptor: JWTServiceType;
 
-  constructor(userRepository: UserRepoType, jwtAdaptor: JWTAdaptorType) {
+  constructor(userRepository: UserRepoType, jwtAdaptor: JWTServiceType) {
     this.userRepository = userRepository;
     this.jwtAdaptor = jwtAdaptor;
   }

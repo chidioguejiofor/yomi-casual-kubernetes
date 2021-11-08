@@ -1,9 +1,8 @@
-import { useContext, useState } from "react";
-import { AuthAdapterContext } from "../context/AuthAdapterContext";
-import { IAuthService } from "../interfaces";
+import { useState } from "react";
+import { useAuthService } from "../context/AuthAdapterContext";
 
 export function useLoginUser() {
-  const authService = useContext(AuthAdapterContext) as IAuthService;
+  const authService = useAuthService();
 
   const [loginArgs, setLoginArgs] = useState({
     data: null,

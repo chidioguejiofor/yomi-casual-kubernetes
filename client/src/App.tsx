@@ -7,23 +7,29 @@ import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 import Header from "./components/header/header.component";
 import Signinandsignup from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
+import Auth0ProviderWithHistory from "./context/Auth0ProviderWithHistory";
+import { AuthAdapterProvider } from "./context/AuthAdapterContext";
 
 const App = (props) => {
   return (
     <div>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/checkout" component={CheckoutPage} />
-        <Route path="/shop" component={ShopPage} />
-        <Route
-          exact
-          path="/signin"
-          render={() =>
-            props.currentUser ? <Redirect to="/" /> : <Signinandsignup />
-          }
-        />
-      </Switch>
+      <Auth0ProviderWithHistory>
+        <AuthAdapterProvider>
+          <Header hidden />
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/checkout" component={CheckoutPage} />
+            <Route path="/shop" component={ShopPage} />
+            <Route
+              exact
+              path="/signin"
+              render={() =>
+                props.currentUser ? <Redirect to="/" /> : <Signinandsignup />
+              }
+            />
+          </Switch>
+        </AuthAdapterProvider>
+      </Auth0ProviderWithHistory>
     </div>
   );
 };

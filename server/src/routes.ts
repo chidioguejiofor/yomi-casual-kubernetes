@@ -59,12 +59,15 @@ export class Routes {
 
     allowAllHostsRouter
       .route("/products")
-      .post(productController.createProduct);
+      .post(
+        this.authController.validateLoginMiddleware,
+        productController.createProduct
+      );
 
     allowAllHostsRouter.route("/products").get(productController.getProducts);
 
-    // protectRouteMiddleWare
     app.use("/api", allowSpecificHostsRouter);
     app.use("/api", allowAllHostsRouter);
+    app.use(this.authController.handleAuthenticationErrors);
   }
 }

@@ -1,4 +1,4 @@
-import { jWTAdaptor } from "./adaptors/JWTAdaptor";
+import { jwtService } from "./services/JWTService";
 import { LoginUsecase } from "./usecases/LoginUsecase";
 import { RegisterUsecase } from "./usecases/RegisterUsecase";
 import { userRepository } from "./repositories";
@@ -9,8 +9,8 @@ class AuthAPI {
   private loginUsecase: LoginUsecase;
 
   constructor() {
-    this.registerUsecase = new RegisterUsecase(userRepository, jWTAdaptor);
-    this.loginUsecase = new LoginUsecase(userRepository, jWTAdaptor);
+    this.registerUsecase = new RegisterUsecase(userRepository, jwtService);
+    this.loginUsecase = new LoginUsecase(userRepository, jwtService);
   }
 
   async loginUser(loginData: ILoginRequest) {
@@ -21,9 +21,7 @@ class AuthAPI {
     return this.registerUsecase.execute(registerData);
   }
 
-  async decodeToken(token: string) {
-    return jWTAdaptor.validateAndDecodeToken(token);
-  }
+  validateTokenMiddleware = jwtService.getJWTValidatorMiddleware();
 }
 
 export const authAPI = new AuthAPI();

@@ -4,6 +4,11 @@ import { authAPI } from "./api";
 import { IRegisterRequest } from "./requestTypes";
 import { loginValidator, registerValidator } from "./validation/auth";
 
+const JWT_ERROR_MESSAGE_MAPPER = {
+  invalid_token: "Session invalid, please login again",
+  credentials_required: "You need to be logged in to access this",
+};
+
 export class AuthController {
   public register = async (
     req: RequestType,
@@ -54,26 +59,42 @@ export class AuthController {
     return res.status(statusCode).json({ ...others });
   }
 
-  public async validateLoginMiddleware(
+  // public async validaxteLoginMiddleware(
+  //   req: RequestType,
+  //   res: Response,
+  //   next: NextFunction
+  // ): Promise<unknown> {
+  //   const { headers } = req;
+  //   const [bearer, token] = headers.authorization?.split(" ") || [];
+
+  //   if (bearer?.toLowerCase() !== "bearer") {
+  //     return res.status(401).json({
+  //       message: "You need to be logged in to access this",
+  //     });
+  //   }
+  //   const [success, decodedOrErrors] = await authAPI.decodeToken(token);
+
+  //   if (!success) {
+  //     return res.status(401).json(decodedOrErrors);
+  //   }
+
+  //   req.decoded = decodedOrErrors;
+  //   next();
+  // }
+
+  public handleAuthenticationErrors(
+    err,
     req: RequestType,
     res: Response,
     next: NextFunction
-  ): Promise<unknown> {
-    const { headers } = req;
-    const [bearer, token] = headers.authorization?.split(" ") || [];
-
-    if (bearer?.toLowerCase() !== "bearer") {
-      return res.status(401).json({
-        message: "You need to be logged in to access this",
-      });
+  ): void {
+    if (err.name === "UnauthorizedError") {
+      const message = JWT_ERROR_MESSAGE_MAPPER[err.code] || err.message;
+      res.status(err.status).send({ message: message });
+      return;
     }
-    const [success, decodedOrErrors] = await authAPI.decodeToken(token);
-
-    if (!success) {
-      return res.status(401).json(decodedOrErrors);
-    }
-
-    req.decoded = decodedOrErrors;
     next();
   }
+
+  public validateLoginMiddleware = authAPI.validateTokenMiddleware;
 }

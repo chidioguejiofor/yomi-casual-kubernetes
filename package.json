@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@types/jsonwebtoken": "^8.5.5",
     "aws-sdk": "^2.1006.0"
   },
   "devDependencies": {

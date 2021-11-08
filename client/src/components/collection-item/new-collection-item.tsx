@@ -1,3 +1,4 @@
+import { useAuth0 } from "@auth0/auth0-react";
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { useCreateProduct } from "../../hooks/shopHooks";
@@ -9,6 +10,7 @@ import "./collection-item.styles.scss";
 
 const NewCollectionItem = ({ categoryId }) => {
   const [showModal, setModal] = useState(false);
+  const { user } = useAuth0();
   const changeModalState = (newState) => () => setModal(newState);
 
   const [createProductState, createProduct] = useCreateProduct(categoryId);
@@ -40,7 +42,11 @@ const NewCollectionItem = ({ categoryId }) => {
       <div className="collection-footer">
         <span className="name"></span>
       </div>
-      <CustomButton onClick={changeModalState(true)}>Add new Item</CustomButton>
+      {user && (
+        <CustomButton onClick={changeModalState(true)}>
+          Add new Item
+        </CustomButton>
+      )}
     </div>
   );
 };

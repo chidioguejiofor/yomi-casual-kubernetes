@@ -18,6 +18,9 @@ export type IRegisterRequest = ILoginRequest & {
 };
 
 export interface IAuthService {
+  isLoggedIn(): boolean;
+  loginWithOAuth(): Promise<void>;
+  logout(): void;
   loginWithEmail(loginRequest: ILoginRequest): Promise<IAuthResponse>;
   registerNewUser(registerRequest: IRegisterRequest): Promise<IAuthResponse>;
 }
