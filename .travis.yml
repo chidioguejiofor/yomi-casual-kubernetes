@@ -15,14 +15,14 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t  capstone-server ./server
-  - docker build -t capstone-frontend ./client
+  - docker build -t  profchidi1/capstone-server ./server
+  - docker build -t profchidi1/capstone-frontend ./client
 
 
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push $DOCKER_USERNAME/capstone-server
-  - docker push $DOCKER_USERNAME/capstone-frontend
+  - docker push profchidi1/capstone-server
+  - docker push profchidi1/capstone-frontend
 
 

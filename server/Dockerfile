@@ -9,6 +9,5 @@ RUN npm ci
 COPY  . .
 RUN npm run build 
 # Bundle app source
-COPY dist ./
 EXPOSE 3000
 CMD [ "npm", "run", "prod" ]
