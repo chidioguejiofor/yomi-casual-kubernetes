@@ -24,6 +24,7 @@
     "**/@typescript-eslint/parser": "^4.1.1"
   },
   "scripts": {
+    "prod": "serve -s build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

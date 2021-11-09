@@ -17,6 +17,7 @@ export class RetrieveProductCategoryUsecase {
         data: categories,
       };
     } catch (error) {
+      console.log(error);
       return {
         message: "There was an error while retrieving product categories",
         statusCode: 400,
